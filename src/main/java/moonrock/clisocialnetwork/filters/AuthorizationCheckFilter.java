@@ -1,7 +1,5 @@
 package moonrock.clisocialnetwork.filters;
 
-import moonrock.clisocialnetwork.database.HibernateConfigurer;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +14,7 @@ import java.io.IOException;
  * configure database and init entities in constructor
  */
 @WebFilter("/*")
-public class AuthorizationCheckFilter implements HibernateConfigurer, Filter {
+public class AuthorizationCheckFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
